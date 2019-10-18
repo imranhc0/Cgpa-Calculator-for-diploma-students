@@ -1,2 +1,3 @@
 # Cgpa-Calculator-for-diploma-students
-You can calculator  
+You can calculate you cgpa in one munite
+
