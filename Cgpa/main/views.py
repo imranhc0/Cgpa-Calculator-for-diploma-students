@@ -19,11 +19,13 @@ def gpa(request):
     fs=float(first*5/100)
     second=float(sec*5/100)
     third=float(thr*5/100)
-    fourth=float(frt*15/100)
+    fourth=float(frt*10/100)
     fifth=float(fif*15/100)
     sixth=float(six*20/100)
     seven=float(sev*25/100)
-    indtr=float(ind*10/100)
+    indtr=float(ind*15/100)
+
+    #this is your cgpa 
     cgpa=format(fs+second+third+fourth+fifth+sixth+seven+indtr,'.2f')
 
 
