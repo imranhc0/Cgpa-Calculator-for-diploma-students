@@ -26,7 +26,7 @@ SECRET_KEY = '1wxyu8w8rj&w&m^@6zfe3(np1b&uk5(5g&qke)6=j(blg4se(^'
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 STATICFILS_DIRS=["Cgpa Calclutor\Cgpa\static\style.css"]
 
