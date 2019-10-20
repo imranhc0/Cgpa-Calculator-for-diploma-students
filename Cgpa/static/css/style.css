@@ -5,7 +5,8 @@
 .ndiv{
 		 max-width: 100%;
          height: 50px;
-         
+         margin-top: 60px;
+         text-align:center;
          background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
 
 
@@ -17,8 +18,8 @@
 
  }		
 .form-container{
-	border:yellow solid 1px;
-	
+	border:blue solid 1px;
+
 	background:white;
 	padding: 20px;
 	box-shadow: 1px 1px 2px #555;
@@ -30,7 +31,7 @@
 	text-align: center;
 }
 .page-title{
-	border:yellow solid 1px;
+
 	text-align: center;
 	margin-bottom: 25px;
 	margin-top: 10px;
@@ -47,14 +48,17 @@
 
 body{
 	
-	background-color:#ce333e;
+	background-color:rgb(44, 122, 178);;
 }
 .header{
-             margin-bottom: 5px;
-             fixed-top;
+             margin-bottom: 15px;
+             transition: top 0.3s;
+             position: fixed; /* Set the navbar to fixed position */
+             top: 0;
+             width: 100%; /* Full width */
              max-width: 100%;
              height: 70px;
-             background-color: #433d5f;
+             background-color: #112431;
 
 }
 h1{

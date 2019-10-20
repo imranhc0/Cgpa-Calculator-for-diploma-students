@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Diploma in Engineering CGPA Calculator | 2016 Probidhan</title>
@@ -9,18 +10,29 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 	<meta property="og:image" content="" />
 	
+	
 	<meta property="article:author" content="https://www.facebook.com/hossenmdimran.9080" />
 
-	
+	<script>var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 </head>
 
 	
   
 
 	<body>
-	<div class="header" >
+	<div class="header" id="navbar">
 	
-	<header>
+	<header >
     
       <h1>👨‍💻Online CGPA Calculator👨‍💻</h1>
 
@@ -39,7 +51,7 @@
 		<div class="container">
 			<div class="form-container">
 				<form name="gpa" id="calculate-cgpa" action="gpa"  > {% csrf_token %}
-				<h3 class="page-title">Diploma in Engineering CGPA Calculato Probidhan-2016</h3>
+				<h3 class="page-title">Diploma in Engineering CGPA Calculator Probidhan-2016</h3>
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-5"><label for="first-cgpa">First Semester CGPA</div>
@@ -113,4 +125,4 @@
 		
 	</body>
 </html>
-/*End this project thanks */
+
