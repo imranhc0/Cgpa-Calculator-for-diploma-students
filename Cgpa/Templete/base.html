@@ -1,273 +1,115 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Diploma in Engineering CGPA Calculator | 2016 Probidhan</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} " />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+	<meta property="og:image" content="" />
+	
+	<meta property="article:author" content="https://www.facebook.com/hossenmdimran.9080" />
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <title>CGPA Calclutor </title>
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'style.css' %}">
-     <style>
+	
+</head>
 
+	
+  
 
-       .ndiv{
-
-         height: 50px;
-         padding-top: 10px;
-         background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-
-
-        }
-        #sub{
-
-          height: 30px;
-          width: 150px;
-          color: white;
-          margin-left: 10px;
-          background-color: #068feb;
-
-        }
-        .h{
-          color: white;
-          margin-bottom: 100px;
-
-           }
-
-           .header{
-             margin-bottom: 5px;
-
-             z-index: 10;
-
-
-             width: 100%;
-             height: 70px;
-             background-color: #433d5f;
-
-           }
-           h1{
-             color: white;
-             text-align: center;
-             margin-right: 20px;
-
-
-           }
-           body{
-
-             background-color: #ce333e;
-           }
-           .fr{
-             text-align: center;
-
-
-           }
-           h3{
-
-
-             text-align: center;
-           }
-           #div{
-
-
-             height: 100%;
-             width: 100%;
-             text-decoration-color: white;
-             background-image: linear-gradient( 109.6deg,  rgba(61,121,176,1) 11.3%, rgba(35,66,164,1) 91.1% );
-
-
-           }
-           table{
-             border: #e6d54b solid 2px;
-             margin-top: 40px;
-             height: 400px;
-             width: 500px;
-             background-color: white;
-             margin-left: 450px;
-             margin-bottom: 100px;
-           }
-
-           /*THis is footer design */
-           *{
-	            margin:0;
-	             padding:0;
-             }
-             .main_wrap{
-	              width:100%
-              }
-              .wrap{
-	                width:960px;
-	                 margin:0 auto;
-
-                 }
-                 .footer_bg{
-	                   background-color:#262233;
-	                    padding:20px 30px;
-                    }
-                    #footer p{
-	                     text-align:center;
-	                      color:white;
-                      }
-                      /*@media screen and (max width:700px;) {
-                        table,
-                        #header,
-                        .ndiv{
-                          float: none;
-                          width: 100%;
-                        }
-
-                      }*/
-
-
-
-
-     </style>
-
-
-  </head>
-  <header>
-    <div class="header">
+	<body>
+	<div class="header" >
+	
+	<header>
+    
       <h1>👨‍💻Online CGPA Calculator👨‍💻</h1>
 
-    </div>
-
-  </header>
-
-
-  <body>
-    <div class="ndiv">
+    
+	</header>
+	</div>
+	<div class="ndiv">
       <marquee><h3 class="h">	&#128640;👨‍💻 Welcome TO Online CGPA Calculator 💥 Thanks! For Using This	&#128640;	&#128640;  </h3></marquee>
 
 
     </div>
 
+	  
+	
+	
+		<div class="container">
+			<div class="form-container">
+				<form name="gpa" id="calculate-cgpa" action="gpa"  > {% csrf_token %}
+				<h3 class="page-title">Diploma in Engineering CGPA Calculato Probidhan-2016</h3>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="first-cgpa">First Semester CGPA</div>
+							<div class="col-md-7"><input id="first-cgpa" name="num1" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="second-cgpa">Second Semester CGPA</div>
+							<div class="col-md-7"><input id="second-cgpa" name="num2" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="third-cgpa">Third Semester CGPA</div>
+							<div class="col-md-7"><input id="third-cgpa" name="num3" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="fourth-cgpa">Fourth Semester CGPA</div>
+							<div class="col-md-7"><input id="fourth-cgpa" name="num4" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="fifth-cgpa">Fifth Semester CGPA</div>
+							<div class="col-md-7"><input id="fifth-cgpa" name="num5" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="sixth-cgpa">Sixth Semester CGPA</div>
+							<div class="col-md-7"><input id="sixth-cgpa" name="num6" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="seventh-cgpa">Seventh Semester CGPA</div>
+							<div class="col-md-7"><input id="seventh-cgpa" name="num7" type="text" class="form-control" required></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-5"><label for="eighth-cgpa">Eighth Semester CGPA</div>
+							<div class="col-md-7"><input id="eighth-cgpa" name="num8" type="text" class="form-control" required></div>
+							<div class="col-md-8">
+							<div class="cgpa"><h4>{{Cgpa}}</h4> </div></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-3 col-md-offset-4""> <input type="submit" class="btn btn-md btn-success" value="Calculate Now" />
+							
+							</div>
+							
+							
+						</div>
+						</div>
+						
+				</form>
+							</div>
 
-
-    <table border="border: white solid 2px;">
-
-
-	<form class="int" action="gpa">
-    <thead>
-      <th>Semesters </th>
-      <th>GPA</th>
-    </thead>
-
-
-
-         <tr>
-           <td>
-           <label class="int"for="frist" > Enter Your First Semester GPA : </label>
-           </td>
-           <td>
-           <input class="int"id="first"type="text" name="num1" required><br>
-           </td>
-
-         </tr>
-
-
-
-
-         <tr>
-           <td>
-      <label for="sec"> Enter Your Second Semester GPA :</label>
-      </td>
-      <td>
-      <input class="int"id="sec"type="text" name="num2" required><br>
-    </td>
-  </tr>
-
-
-      <tr>
-        <td>
-      <label for="thr"> Enter Your Third Semester GPA :</label>
-      </td>
-      <td>
-      <input class="int" id="thr"type="text" name="num3" required><br>
-    </td>
-  </tr>
-
-      <tr>
-        <td>
-      <label for="frt"> Enter Your Fourth Semester GPA :</label>
-    </td>
-    <td>
-      <input class="int"id="frt"type="text" name="num4" required><br>
-    </td>
-  </tr>
-
-      <tr>
-        <td>
-      <label for="fif"> Enter Your Fifth Semester GPA :</label>
-    </td>
-    <td>
-      <input class="int"id="fif"type="text" name="num5" required><br>
-    </td>
-  </tr>
-
-      <tr>
-        <td>
-      <label for="six"> Enter Your Six Semester GPA :</label>
-    </td>
-    <td>
-      <input class="int"id="six"type="text" name="num6" required><br>
-    </td>
-  </tr>
-
-      <tr>
-        <td>
-      <label for="sev"> Enter Your Seven Semester GPA :</label>
-    </td>
-    <td>
-      <input class="int"id="sev"type="text" name="num7" required><br>
-    </td>
-  </tr>
-
-      <tr>
-        <td>
-      <label for="ind"> Enter Your Industrial Attachment GPA :</label>
-    </td>
-    <td>
-      <input class="int"id="ind"type="text" name="num8" required><br>
-    </td>
-  </tr>
-
-      <tr>
-        <td>
-      <input class="int"id="sub"type="submit" name="cgpa" value="Calculate Now"   >
-    </td>
-    <td>
-
-      <div class="cgpa">
-        <h4>Your CGPA is : {{Cgpa}}</h4>
-      </div>
-      </td>
-
-  </tr>
-  <tr>
-    <td>
-
-    </td>
-  </tr>
-
-
-    </form>
-    </table>
-    <div class="main_wrap footer_bg">
-		<div class="wrap">
-			<footer>
-				<div id="footer">
-					<p>&copy; All Right Reserved</p>
+			<div class="copyright">
+				<p>&copy; 2019 All Right Reserved</p>
 					<p>Design And Developed By Md Imran Hossen</p>
-				</div>
-			</footer>
+			</div>
 		</div>
-	</div>
-
-
-
-  </body>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		
+	</body>
 </html>

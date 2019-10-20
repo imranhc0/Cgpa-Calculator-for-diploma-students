@@ -27,7 +27,8 @@ def gpa(request):
 
     #this is your cgpa 
     cgpa=format(fs+second+third+fourth+fifth+sixth+seven+indtr,'.2f')
+    txt="Your CGPA is : "
 
 
 
-    return render(request,"base.html",{'Cgpa':cgpa})
+    return render(request,"base.html",{'Cgpa':txt+cgpa})
